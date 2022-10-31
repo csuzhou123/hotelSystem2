@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增酒店</title>
+</head>
+<body>
+
+<form action="{{ url_for('addhotel')}}" method="post">
+<table>
+    <tr>
+            <th>酒店地址</th>
+            <th>酒店简介</th>
+            <th>酒店服务 </th>
+            <th>酒店类型</th>
+            <th>酒店价格</th>
+            <th>酒店商圈</th>
+            <th>酒店星级</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="address" name="address" >
+        </td>
+        <td>
+            <input type="text" id="introduction" name="introduction" >
+        </td>
+        <td>
+            <input type="text" id="service" name="service" >
+        </td>
+        <td>
+            <input type="text" id="home_type" name="home_type" >
+        </td>
+         <td>
+            <input type="text" id="price" name="price" >
+        </td>
+         <td>
+            <input type="text" id="shangquan" name="shangquan" >
+        </td>
+        <td>
+            <input type="text" id="stars" name="stars" >
+        </td>
+    </tr>
+</table>
+<input type="submit" name="updatehotel" value="保存信息">
+</form>
+</body>
+</html>

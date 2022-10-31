@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店详情</title>
+</head>
+<body>
+<form action="{{ url_for('updatehotel')}}" method="post">
+<table>
+    <tr>
+            <th>酒店id </th>
+            <th>酒店地址</th>
+            <th>酒店简介</th>
+            <th>酒店服务 </th>
+            <th>酒店类型</th>
+            <th>酒店价格</th>
+            <th>酒店商圈</th>
+            <th>酒店星级</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="hotel_id" name="hotel_id" value={{ hotel[0] }}>
+        </td>
+        <td>
+            <input type="text" id="address" name="address" value={{ hotel[1] }}>
+        </td>
+        <td>
+            <input type="text" id="introduction" name="introduction" value={{ hotel[2] }}>
+        </td>
+        <td>
+            <input type="text" id="service" name="service" value={{ hotel[3] }}>
+        </td>
+        <td>
+            <input type="text" id="home_type" name="home_type" value={{ hotel[4] }}>
+        </td>
+         <td>
+            <input type="text" id="price" name="price" value={{ hotel[5] }}>
+        </td>
+         <td>
+            <input type="text" id="status" name="status" value={{ hotel[6] }}>
+        </td>
+         <td>
+            <input type="text" id="status" name="status" value={{ hotel[7] }}>
+        </td>
+    </tr>
+</table>
+<input type="submit" name="updatehotel" value="保存信息">
+</form>
+</body>
+</html>

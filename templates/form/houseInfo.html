@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店房间信息</title>
+</head>
+<body>
+<form action="{{ url_for('updatehouse')}}" method="post">
+<table>
+    <tr>
+            <th>房间id </th>
+            <th>房间类型 </th>
+            <th>酒店id</th>
+            <th>酒店价格</th>
+            <th>酒店状态</th>
+            <th>新增房间</th>
+    </tr>
+    {% for house in houses %}
+    <tr>
+        <td>
+            <input type="text" id="house_id" name="house_id" value={{ house[0] }}>
+        </td>
+        <td>
+            <input type="text" id="house_type" name="house_type" value={{ house[1] }}>
+        </td>
+        <td>
+            <input type="text" id="hotel_id" name="hotel_id" value={{ house[2] }}>
+        </td>
+        <td>
+            <input type="text" id="price" name="price" value={{ house[3] }}>
+        </td>
+        <td>
+            <input type="text" id="status" name="status" value={{ house[4] }}>
+        </td>
+{#        <td><a href="/viewhotel/{{ item[0] }}">修改/查看详情</a></td>#}
+
+    </tr>
+     {% endfor %}
+</table>
+<input type="submit" name="updatehouse" value="保存信息" >
+    <a href="/viewaddhouse">新增酒店房间</a>
+
+
+</form>
+</body>
+</html>

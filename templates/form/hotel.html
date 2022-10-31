@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>酒店详情</title>
+</head>
+<body>
+ <table border="1">
+
+         <tr>
+            <th>酒店id </th>
+            <th>酒店地址</th>
+            <th>酒店简介</th>
+            <th>酒店服务 </th>
+            <th>酒店类型</th>
+            <th>酒店价格</th>
+            <th>酒店状态</th>
+            <th>修改酒店信息</th>
+            <th>设置酒店客房信息</th>
+        </tr>
+        {% for item in results %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>{{ item[4] }}</td>
+                <td>{{ item[5] }}</td>
+                <td>{{ item[6] }}</td>
+                <td><a href="/viewhotel/{{ item[0] }}">修改/查看详情</a></td>
+                <td><a href="/viewhouse/{{ item[0] }}">设置酒店客房信息</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

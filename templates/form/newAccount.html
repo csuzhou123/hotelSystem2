@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增酒店管理人员</title>
+</head>
+<body>
+
+<form action="{{ url_for('register')}}" method="post">
+<table>
+    <tr>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>真实姓名 </th>
+            <th>手机号</th>
+            <th>地址</th>
+
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="username" name="username" >
+        </td>
+        <td>
+            <input type="text" id="password" name="password" >
+        </td>
+        <td>
+            <input type="text" id="name" name="name" >
+        </td>
+        <td>
+            <input type="text" id="phone" name="phone" >
+        </td>
+         <td>
+            <input type="text" id="address" name="address" >
+        </td>
+    </tr>
+</table>
+<input type="submit" name="register" value="注册">
+</form>
+</body>
+</html>

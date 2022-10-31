@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增酒店房间</title>
+</head>
+<body>
+
+<form action="{{ url_for('addhouse')}}" method="post">
+<table>
+    <tr>
+            <th>房间类型</th>
+            <th>酒店id</th>
+            <th>价格</th>
+            <th>房间状态</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="house_type" name="house_type" >
+        </td>
+        <td>
+            <input type="text" id="hotel_id" name="hotel_id">
+        </td>
+        <td>
+            <input type="text" id="price" name="price" >
+        </td>
+        <td>
+            <input type="text" id="status" name="status" >
+        </td>
+    </tr>
+</table>
+<input type="submit" name="register" value="注册">
+</form>
+</body>
+</html>
